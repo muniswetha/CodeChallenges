@@ -1,0 +1,6 @@
+E:\Git\EHMQueryMonitoring\WCC01-08-2016\WCC01-08-2016\bin\Debug\WCC01-08-2016.exe.config
+E:\Git\EHMQueryMonitoring\WCC01-08-2016\WCC01-08-2016\bin\Debug\WCC01-08-2016.exe
+E:\Git\EHMQueryMonitoring\WCC01-08-2016\WCC01-08-2016\bin\Debug\WCC01-08-2016.pdb
+E:\Git\EHMQueryMonitoring\WCC01-08-2016\WCC01-08-2016\obj\Debug\WCC01-08-2016.csprojResolveAssemblyReference.cache
+E:\Git\EHMQueryMonitoring\WCC01-08-2016\WCC01-08-2016\obj\Debug\WCC01-08-2016.exe
+E:\Git\EHMQueryMonitoring\WCC01-08-2016\WCC01-08-2016\obj\Debug\WCC01-08-2016.pdb
