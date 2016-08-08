@@ -6,15 +6,19 @@ using System.Threading.Tasks;
 
 namespace WCC01_08_2016
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             UInt16[] array = { 11, 20, 8, 31 };
-            FindEle(array);
+            var element = FindEle(array);
+            if(element == null)
+                Console.WriteLine("No Element found with equal weights on both sides.");
+            else
+                Console.WriteLine("Element is {0}", element);
         }
 
-        public static UInt16 FindEle(UInt16[] array)
+        public static UInt16? FindEle(UInt16[] array)
         {
             if(ValidateArray(array))
             {
@@ -43,16 +47,25 @@ namespace WCC01_08_2016
                     return array[leftIndex];
                 }
                 Console.WriteLine("No Element found with equal weights on both sides.");
-                return ushort.MinValue;
+                return null;
             }
             Console.WriteLine("Elements in array are not meeting criteria.");
-            return ushort.MinValue;
+            return null;
         }
 
         public static bool ValidateArray(UInt16[] array)
         {
             if (array == null) throw new ArgumentNullException("array");
-            return array.Max() <= 20000 && array.Min() > 0;
+            var loopLength = array.Length%2 == 0 ? array.Length/2 : array.Length/2 + 1;
+            for (var i = 0; i < loopLength; i++)
+            {
+                var rightIndex = array.Length - i - 1;
+                if (array[i] <= 20000 && array[i] > 0 && array[i] <= 20000 && array[rightIndex] > 0 &&
+                    array[rightIndex] <= 20000)
+                    continue;
+                return false;
+            }
+            return true;
         }
     }
 }
